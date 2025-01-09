@@ -69,7 +69,7 @@ export default function StylesPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [lengthFilter, setLengthFilter] = useState("all");
   const [typeFilter, setTypeFilter] = useState("all");
-  const [filteredStyles, setFilteredStyles] = useState([]);
+  const [filteredStyles, setFilteredStyles] = useState<typeof hairstyles>([]);
 
   const filteredHairstyles = useMemo(() => {
     return hairstyles.filter((style) => {
