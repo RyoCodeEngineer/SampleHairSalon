@@ -38,7 +38,19 @@ const staffMembers = [
   },
 ];
 
-const StaffMember = ({ member, index }) => {
+interface StaffMemberProps {
+  member: {
+    id: number;
+    name: string;
+    role: string;
+    image: string;
+    description: string;
+    specialties: string[];
+  };
+  index: number;
+}
+
+const StaffMember = ({ member, index }: StaffMemberProps) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,

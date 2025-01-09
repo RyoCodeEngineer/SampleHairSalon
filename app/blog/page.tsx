@@ -69,7 +69,18 @@ const blogPosts = [
   },
 ];
 
-const BlogPost = ({ post }) => (
+interface BlogPostProps {
+  post: {
+    id: number;
+    title: string;
+    excerpt: string;
+    image: string;
+    date: string;
+    category: string;
+  };
+}
+
+const BlogPost = ({ post }: BlogPostProps) => (
   <motion.div
     layout
     initial={{ opacity: 0 }}
